@@ -1,0 +1,30 @@
+* {
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+}
+.container {
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 240px;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 160px;
+    }
+}
+@media (max-width: 998px){
+    .container {
+        padding: 0 60px;
+    }
+}
+@media (max-width: 480px){
+    .container {
+        padding: 0 20px;
+    }
+}
+@media (max-width: 320px){
+    .container {
+        padding: 0 10px;
+    }
+}

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/normalize.css">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/modal.css">
+    <link rel="stylesheet" type="text/css" href="styles/header.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="styles/footer.css">
+</head>
+<body>
+<header class="container flex">
+    <div class="logo">LOGO</div>
+    <div class="icon_group">
+        <img src="images/person.svg" alt="person" class="icon"/>
+        <img src="images/favorite.svg" alt="favorite" class="icon"/>
+        <img src="images/bag.svg" alt="bag" class="icon"/>
+        <div class="burger-menu" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <div class="menu">
+        <ul class="burger_list">
+            <li class="burger_item" onclick="closeMenu()">Постельное белье</li>
+            <li class="burger_item" onclick="closeMenu()">Одежда для дома</li>
+            <li class="burger_item" onclick="closeMenu()">Одежда для улицы</li>
+            <li class="burger_item" onclick="closeMenu()">Выход</li>
+        </ul>
+    </div>
+</header>
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <h3 class="sub_title">Купить в 1 клик</h3>
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="column">
+            <input class="modal_input" type="text" placeholder="+7 (---) --- -- --">
+            <input class="modal_input" type="text" placeholder="Ваше имя">
+        </div>
+        <p class="modal_text">Нажимая кнопку “Отправить”, я даю согласие на обработку моих персональных данных в соответствии с
+            <a href="#" class="size_guide" style="font-size: 10px">Условиями конфиденциальности</a></p>
+        <button style="margin: unset "  class="submit black_button">Отправить</button>
+    </div>
+</div>
+
+<main class="container">
+    <div style="display: block">
+        <div class="product-image">
+            <div class="image-group">
+                <img src="images/small-image1.png" alt="Active Image" class="slider_image">
+                <img src="images/small-image1.png" alt="Product Image1" class="slider_image">
+                <img src="images/small-image2.png" alt="Product Image2" class="slider_image">
+                <img src="images/small-image3.png" alt="Product Image3" class="slider_image">
+                <img src="images/small-image4.png" alt="Product Image4" class="slider_image">
+                <img src="images/small-image5.png" alt="Product Image5" class="slider_image">
+            </div>
+        </div>
+    </div>
+    <div class="product-description">
+        <p class="title">Пижама для девочек</p>
+        <p class="article">Арт. 02765/46</p>
+        <a class="rating" href="#">
+            Отзывы
+            <div class="stars_group">
+                <img src="images/star_full.svg" alt="star" class="star"/>
+                <img src="images/star_full.svg" alt="star" class="star"/>
+                <img src="images/star_full.svg" alt="star" class="star"/>
+                <img src="images/star_full.svg" alt="star" class="star"/>
+                <img src="images/star_border.svg" alt="star_border" class="star"/>
+            </div>
+            <p>
+                14 отзывов
+                <img class="text_symbol" src="images/arrow-right.svg" alt="right">
+            </p>
+        </a>
+        <div class="price_row">
+            <a href="#" class="rating">
+                <p class="price">800 ₽</p>
+                <p class="old_price">
+                    <del>
+                        1500 ₽
+                        <img class="text_symbol" src="images/arrow-right.svg" alt="right">
+                    </del>
+                </p>
+            </a>
+        </div>
+        <div class="discount_row">
+            <div class="discount">скидка -47%</div>
+            <div class="discount">акция -20%</div>
+        </div>
+        <select class="select">
+            <option>Выбрать размер</option>
+            <option>Small</option>
+            <option>Medium</option>
+            <option>Large</option>
+        </select>
+        <a class="size_guide" href="#">Определить размер</a>
+        <div class="row">
+            <div class="quantity">
+                <button class="counter_item" onclick="decrement()">-</button>
+                <input class="counter_item" disabled type="text" value="1"/>
+                <button class="counter_item" onclick="increment()">+</button>
+            </div>
+            <div class="buttons_group">
+                <button class="black_button submit">Добавить в корзину</button>
+                <button class="black_button">
+                    <img src="images/favorite-w.svg" alt="favorite" class="black_icon icon"/>
+                </button>
+            </div>
+        </div>
+        <button class="buy-one-click" onclick="openModal()">Купить в 1 клик</button>
+        <span class="line"></span>
+        <div class="information">
+            <a href="#" class="additional_information"><img class="text_symbol left" src="images/Closes.svg" alt="product desctiption">Описание товара</a>
+            <a href="#" class="additional_information"><img class="text_symbol left" src="images/clock.svg" alt="time and delivery">Доставка и возврат</a>
+            <a href="#" class="additional_information"><img class="text_symbol left" src="images/Group.svg" alt="pay">Способы оплаты</a>
+        </div>
+    </div>
+
+</main>
+
+<footer class="container">
+    <div class="footer-section">
+        <div>
+            <h4 class="footer_title">ПОКУПАТЕЛЯМ</h4>
+            <ul class="list">
+                <li><a href="#" class="text">Каталог</a></li>
+                <li><a href="#" class="text">Акции</a></li>
+                <li><a href="#" class="text">Бренды</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="footer_title">О НАС</h4>
+            <ul class="list">
+                <li><a href="#" class="text">Компания</a></li>
+                <li><a href="#" class="text">Новости</a></li>
+                <li><a href="#" class="text">Команда</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="subscribe-section">
+        <h4 class="footer_title">УЗНАЙТЕ ПЕРВЫМИ О НОВИНКАХ И АКЦИЯХ</h4>
+        <form class="column">
+            <div class="flex">
+                <input class="input" type="email" placeholder="Enter your email">
+                <button class="reset_button" type="reset">&#10005;</button>
+            </div>
+            <span class="line"></span>
+            <div class="just_end">
+                <button class="subscribe_button">Подписаться</button>
+            </div>
+        </form>
+    </div>
+</footer>
+    <script src="script/script.js"></script>
+</body>
+</html>
